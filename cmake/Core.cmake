@@ -18,8 +18,11 @@ function(single_executable)
     add_executable(${PROJECT_NAME}_${FILE_NAME_WLE} ${SOURCE_EXE})
 endfunction()
 
-function(add_projects)
-    target_link_libraries(${PROJECT_NAME} ${ARGN})
+function(single_executable_link_projects)
+    list(GET ARGN 0 FILE_NAME)
+    get_filename_component(FILE_NAME_WLE ${FILE_NAME} NAME_WLE)
+    list(REMOVE_AT ARGN 0)
+    target_link_libraries(${PROJECT_NAME}_${FILE_NAME_WLE} ${ARGN})
 endfunction()
 
 function(include_projects_directories)

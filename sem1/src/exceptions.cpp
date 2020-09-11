@@ -3,7 +3,7 @@
 using namespace std;
 
 void throwException() {
-    throw std::exception("Some exception!");
+    throw std::runtime_error("Some exception!");
 }
 
 double divide(int a, int b) {
@@ -31,4 +31,6 @@ int main() {
     } catch (std::exception& e) {
         cout << e.what() << endl;
     }
+
+    return 0;
 }
