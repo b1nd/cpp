@@ -24,7 +24,7 @@ TEST(fibonacci, case4) {
 }
 
 TEST(fibonacci, case5) {
-    EXPECT_EQ(12586269025, fibonacci(55));
+    EXPECT_EQ(12586269025, fibonacci(50));
 }
 
 #pragma endregion
