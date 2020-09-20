@@ -3,6 +3,12 @@
 using namespace std;
 
 int main() {
+    int number = 5;
+    int& refNumber = number;
+    cout << refNumber << endl; // 5
+    refNumber = 20;
+    cout << number << endl; // 20
+
     int x = 10;
     // & - получить адрес памяти, в котором хранится значение x
     // type* означает, что переменная является указателем (занимает int32 байт, вне зависимости от типа)

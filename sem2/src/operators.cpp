@@ -6,10 +6,6 @@ public:
         seconds = sec;
     }
 
-    void display() const {
-        std::cout << seconds << " seconds" << std::endl;
-    }
-
     Counter operator+(Counter other) const {
         return Counter(seconds + other.seconds);
     }
@@ -35,6 +31,12 @@ public:
         return prev;
     }
 
+    // friend функция имеет доступ к приватным членам класса
+    friend std::ostream& operator<<(std::ostream& out, const Counter& counter) {
+        out << counter.seconds << " seconds";
+        return out;
+    }
+
 private:
     int seconds;
 };
@@ -45,7 +47,8 @@ int main() {
     Counter c1(20);
     Counter c2(10);
     Counter c3 = c1 + c2;
-    c3.display(); // 30 seconds
+
+    cout << c3 << endl; // 30 seconds
 
     int seconds = c1 + 25;
     cout << "c1 + 25 = " << seconds << endl; // c1 + 25 = 45
