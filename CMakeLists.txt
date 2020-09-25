@@ -20,6 +20,7 @@ add_subdirectory(${googletest_SOURCE_DIR} ${googletest_BINARY_DIR})
 
 add_subdirectory(sem1)
 add_subdirectory(sem2)
+add_subdirectory(sem3)
 add_subdirectory(task1)
 add_subdirectory(Point)
 add_subdirectory(PointArray)
