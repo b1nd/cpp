@@ -7,6 +7,10 @@
 ### Дополнительные материалы семинар 2
 https://github.com/Stardah/classes-example
 
+### Дополнительные материалы семинар 3
+Отдельный проект задания на семинар с sln для Visual Studio:
+https://github.com/Stardah/cyclic-queue-task
+
 ### Задание на семинар 1
 Реализовать 6 функций в соответствующих файлах .cpp в директории task1/src.
 
