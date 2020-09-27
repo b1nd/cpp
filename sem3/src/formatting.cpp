@@ -17,6 +17,14 @@ int main() {
     cout << "--------------------" << endl;
 
     ////// ostream formatting
+    // Флаги форматирования
+    cout.unsetf(ios::dec);
+    cout.setf(ios::hex);
+    cout << "108 hex: " << 108 << endl;
+    cout.unsetf(ios::hex);
+    cout.setf(ios::dec);
+
+    // Манипуляторы форматирования
     stringstream ss;
     ss << "integer: " << setw(5) << setfill('0') << i
        << ", double: " << fixed << setprecision(3) << d
