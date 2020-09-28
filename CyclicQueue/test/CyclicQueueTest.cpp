@@ -23,9 +23,9 @@ using namespace std;
  * push 5
  * push 6
  * size
- * back
+ * front
  * pop
- * back
+ * front
  * exit
  *
  * Пример выходных данных:
