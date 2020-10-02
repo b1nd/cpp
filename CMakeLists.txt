@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.8)
 
 project(cpp)
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
 
 include(cmake/Core.cmake)
 include(cmake/DownloadProject.cmake)
@@ -21,6 +21,7 @@ add_subdirectory(${googletest_SOURCE_DIR} ${googletest_BINARY_DIR})
 add_subdirectory(sem1)
 add_subdirectory(sem2)
 add_subdirectory(sem3)
+add_subdirectory(sem4)
 add_subdirectory(task1)
 add_subdirectory(Point)
 add_subdirectory(PointArray)
