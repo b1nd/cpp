@@ -8,7 +8,7 @@ void BinaryTree<T>::insert(T key) {
 }
 
 template<typename T>
-void BinaryTree<T>::RecursiveInsert(T key, Node<T>* pNode) {
+void BinaryTree<T>::recursiveInsert(T key, Node<T>* pNode) {
     // todo
     throw std::runtime_error("Not implemented!");
 }
@@ -20,7 +20,7 @@ bool BinaryTree<T>::search(T key) {
 }
 
 template<typename T>
-bool BinaryTree<T>::RecursiveSearch(T key, Node<T>* pNode) {
+bool BinaryTree<T>::recursiveSearch(T key, Node<T>* pNode) {
     // todo
     throw std::runtime_error("Not implemented!");
 }
@@ -32,7 +32,7 @@ void BinaryTree<T>::remove(T key) {
 }
 
 template<typename T>
-Node<T>* BinaryTree<T>::RecursiveRemove(T key, Node<T>* pNode) {
+Node<T>* BinaryTree<T>::recursiveRemove(T key, Node<T>* pNode) {
     // todo
     throw std::runtime_error("Not implemented!");
 }
@@ -44,7 +44,7 @@ T BinaryTree<T>::minimum() {
 }
 
 template<typename T>
-T BinaryTree<T>::RecursiveMinimum(Node<T>* pNode) {
+T BinaryTree<T>::recursiveMinimum(Node<T>* pNode) {
     // todo
     throw std::runtime_error("Not implemented!");
 }
@@ -56,7 +56,7 @@ T BinaryTree<T>::maximum() {
 }
 
 template<typename T>
-T BinaryTree<T>::RecursiveMaximum(Node<T>* pNode) {
+T BinaryTree<T>::recursiveMaximum(Node<T>* pNode) {
     // todo
     throw std::runtime_error("Not implemented!");
 }

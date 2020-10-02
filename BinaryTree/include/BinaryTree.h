@@ -68,15 +68,15 @@ public:
     }
 
 private:
-    void RecursiveInsert(T key, Node<T>* pNode);
+    void recursiveInsert(T key, Node<T>* pNode);
 
-    bool RecursiveSearch(T key, Node<T>* pNode);
+    bool recursiveSearch(T key, Node<T>* pNode);
 
-    Node<T>* RecursiveRemove(T key, Node<T>* pNode);
+    Node<T>* recursiveRemove(T key, Node<T>* pNode);
 
-    T RecursiveMinimum(Node<T>* pNode);
+    T recursiveMinimum(Node<T>* pNode);
 
-    T RecursiveMaximum(Node<T>* pNode);
+    T recursiveMaximum(Node<T>* pNode);
 
 private:
     Node<T>* root_;
