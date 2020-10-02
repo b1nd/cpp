@@ -6,6 +6,7 @@
 
 using namespace std;
 
+// Первый аргумент командной строки должен содержать полный путь до файла с тестовыми данными из папки test/data
 int main(int argc, char** argv) {
     if (argc < 2) {
         throw logic_error("Program must contain a command line path argument to the file with test data!");

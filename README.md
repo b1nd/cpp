@@ -36,3 +36,10 @@ https://github.com/Stardah/cyclic-queue-task
 описание доступно над ее сигнатурой.
 
 Задание считается выполненным, если пройдены все тесты при запуске файла CyclicQueue/test/CyclicQueueTest.cpp
+
+ ### Задание на семинар 4
+Реализовать класс BinaryTree. Описание класса доступно в директории BinaryTree/include в заголовочном файле .h
+  
+Класс реализуется в директории BinaryTree/include в файле BinaryTree.hpp
+
+Задание считается выполненным, если пройдены все тесты при запуске файла BinaryTree/test/BinaryTreeTest.cpp
