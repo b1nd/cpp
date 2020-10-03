@@ -11,6 +11,10 @@ https://github.com/Stardah/classes-example
 Отдельный проект задания на семинар с sln для Visual Studio:
 https://github.com/Stardah/cyclic-queue-task
 
+### Дополнительные материалы семинар 4
+Отдельный проект задания на семинар с sln для Visual Studio:
+https://github.com/Stardah/binary-tree
+
 ### Задание на семинар 1
 Реализовать 6 функций в соответствующих файлах .cpp в директории task1/src.
 
