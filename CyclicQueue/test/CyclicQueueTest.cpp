@@ -41,9 +41,37 @@ using namespace std;
  * которая принимает на вход 2 аргумента - путь к файлу с тестом и путь к файлу, куда необходимо
  * выводить ответы, и с помощью объекта очереди с capacity = 100 решить задачу.
 */
+
 void solve(const std::string& pathToTest, const std::string& pathToOut) {
-    // todo
-    throw std::runtime_error("Not implemented!");
+    ifstream testFile {pathToTest};
+    ofstream outFile {pathToTest};
+
+    CyclicQueue *queue = new CyclicQueue();
+
+    while (!testFile.eof()) {
+        string cmd;
+        int arg;
+        testFile >> cmd;
+
+        if (cmd == "push") {
+            testFile >> arg;
+            queue->push(arg);
+            outFile << "ok";
+        } else if (cmd == "pop") {
+            outFile << queue->pop();
+        } else if (cmd == "size") {
+            outFile << queue->size();
+        } else if (cmd == "front") {
+            outFile << queue->front();
+        } else if (cmd == "clear") {
+            outFile << "ok";
+            queue->clear();
+        }
+         else if (cmd == "exit") {
+            outFile << "bye";
+            break;
+        }
+    }
 }
 
 bool check(const string& answerPath, const string& progPath) {
@@ -67,10 +95,10 @@ bool check(const string& answerPath, const string& progPath) {
 
 // Первый аргумент командной строки должен содержать полный путь до тестовых данных (test/data)
 int main(int argc, char** argv) {
-    if (argc < 2) {
-        throw logic_error("Program must contain a command line argument to the directory with test data!");
-    }
-    const string dataDirPath = argv[1];
+    // if (argc < 2) {
+    //     throw logic_error("Program must contain a command line argument to the directory with test data!");
+    // }
+    const string dataDirPath = "./data";
 
     for (int i = 1; i <= 16; ++i) {
         const string number = to_string(i);

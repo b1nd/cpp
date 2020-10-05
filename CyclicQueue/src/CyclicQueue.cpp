@@ -3,51 +3,57 @@
 #include <CyclicQueue.h>
 
 CyclicQueue::CyclicQueue() {
-    // todo
-    throw std::runtime_error("Not implemented!");
+    left_ = 0;
+    right_ = 0;
+    size_ = 0;
+    capacity_ = 100;
+    arr_ = new int[100];
 }
 
 CyclicQueue::CyclicQueue(int capacity) {
-    // todo
-    throw std::runtime_error("Not implemented!");
+    left_ = 0;
+    right_ = 0;
+    size_ = 0;
+    arr_ = new int[capacity_];
+    capacity_ = capacity;
 }
 
 CyclicQueue::~CyclicQueue() {
-    // todo
-    throw std::runtime_error("Not implemented!");
+    delete[] arr_;
 }
 
-CyclicQueue::CyclicQueue(const CyclicQueue& other) {
-    // todo
-    throw std::runtime_error("Not implemented!");
-}
+// CyclicQueue::CyclicQueue(const CyclicQueue& other) {
+//     // todo
+//     throw std::runtime_error("Not implemented!");
+// }
 
 CyclicQueue& CyclicQueue::operator=(const CyclicQueue& other) {
-    // todo
-    throw std::runtime_error("Not implemented!");
+    CyclicQueue *copied = new CyclicQueue(other.capacity_);
+        
+    for (int i = 0; i < other.size_; i++) 
+        copied->push(other.arr_[i]);
 }
 
 void CyclicQueue::push(int item) {
-    // todo
-    throw std::runtime_error("Not implemented!");
+    size_++;
+    arr_[++right_] = item;
 }
 
 int CyclicQueue::size() const {
-    // todo
-    throw std::runtime_error("Not implemented!");
+    return abs((right_ - left_) % capacity_);
 }
 
 int CyclicQueue::pop() {
-    // todo
-    throw std::runtime_error("Not implemented!");
+    size_--;
+    return arr_[left_++ % capacity_];
 }
 
 int CyclicQueue::front() const {
-    // todo
-    throw std::runtime_error("Not implemented!");
+    return arr_[left_ % capacity_];
 }
 
 void CyclicQueue::clear() {
-    // todo
-    throw std::runtime_error("Not implemented!");
+    left_ = 0;
+    right_ = 0;
+    size_ = 0;
 }
