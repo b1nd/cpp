@@ -3,7 +3,7 @@
 
 using namespace std;
 
-// Возвести 2 в степень n
+// Возвести 2 в степень n побитовыми операциями
 unsigned long long power2(unsigned int n);
 
 #pragma region power2 tests
