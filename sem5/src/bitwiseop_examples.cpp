@@ -28,6 +28,16 @@ bool getBit(unsigned int src, unsigned int index) {
     return src &= (1u << index);
 }
 
+// Подсчет количества единичных битов
+unsigned int popcnt(unsigned int x) {
+    x = x - ((x >> 1u) & 0x55555555u);
+    x = (x & 0x33333333u) + ((x >> 2u) & 0x33333333u);
+    x = (x + (x >> 4u)) & 0x0F0F0F0Fu;
+    x = x + (x >> 8u);
+    x = x + (x >> 16u);
+    return x & 0x0000003Fu;
+}
+
 int main() {
     cout << leadingZeroesNumber(1u << 15u) << endl;
     unsigned int x = 7;
@@ -35,6 +45,9 @@ int main() {
     setBit(x, 1, false);
     cout << "x bit at index 1 after setBit(x, 1, false): " << getBit(x, 1) << endl;
     cout << "x after setBit(x, 1, false): " << x << endl;
+
+    cout << "popcnt(7): " << popcnt(7) << endl; // 111
+    cout << "popcnt(5): " << popcnt(5) << endl; // 101
 
     return 0;
 }
