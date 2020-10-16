@@ -28,4 +28,6 @@ int main() {
 
     cout << "final list: ";
     for (auto&& el : l) cout << el << " ";
+
+    return 0;
 }

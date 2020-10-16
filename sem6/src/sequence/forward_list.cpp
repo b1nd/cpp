@@ -17,4 +17,6 @@ int main() {
 
     cout << "forward_list after pop_front() and erase_after(++flist.begin()): ";
     for (auto&& el : flist) cout << el << " ";
+
+    return 0;
 }

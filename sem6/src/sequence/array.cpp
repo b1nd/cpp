@@ -26,4 +26,6 @@ int main() {
     for (auto&& it = arr.cbegin(); it != arr.cend(); it++) {
         cout << *it << " ";
     }
+
+    return 0;
 }
