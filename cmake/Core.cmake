@@ -44,6 +44,5 @@ function(include_projects_directories)
         list(APPEND include_dirs ${${dir}})
     endforeach ()
 
-    message(${include_dirs})
     include_directories(${include_dirs})
 endfunction()
