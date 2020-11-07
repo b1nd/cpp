@@ -31,7 +31,7 @@ void writeVector(const std::string&& path, const std::vector<T>&& vector) {
     std::ofstream output{path, std::ofstream::out | std::ofstream::binary};
     // Записываем размер вектора
     int size = vector.size();
-    output.write(reinterpret_cast<const char*>(&size), sizeof(T));
+    output.write(reinterpret_cast<const char*>(&size), sizeof(size));
 
     // Записываем элементы вектора
     for (auto& item : vector) {
